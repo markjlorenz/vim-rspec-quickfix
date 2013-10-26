@@ -24,7 +24,7 @@ In VIM:
 ```
 # ( these are all VIM built-in commands )
 :cg quickfix.out        # load the quickfix file (you'll need to do this everytime the specs run)
-:cwindow                # open the quckfix
+:cwindow                # open the quickfix
 
 # In the quickfix buffer
 :cn                     # Jump to the first failure
