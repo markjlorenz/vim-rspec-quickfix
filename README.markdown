@@ -7,7 +7,7 @@
 ## Installation
 This repo is more of a how-to, than packaged sofware.  Imma show you how to do it, but once you see how all the pieces fit togeather, you gotta adapt it how you like.  Don't worry ruby, VIM and rspec all play by the unix rule, "streams of text", so it's really simple!
 
-In your shell:
+**In your shell:**
 ```bash
 # Setup the spec formatter, so VIM can read rspec's output:
 cp spec/support/formatters/VIM_formatter.rb YOURREPO/spec/support/formatters/vim_formatter.rb
@@ -20,7 +20,7 @@ rspec --require=support/formatters/VIM_formatter.rb --format VimFormatter --out 
 # `quickfix.out` now has the VIM-friendly spec output.
 ```
 
-In VIM:
+**In VIM:**
 ```
 # ( these are all VIM built-in commands )
 :cg quickfix.out        # load the quickfix file (you'll need to do this everytime the specs run)
@@ -40,7 +40,7 @@ In VIM:
 ## Working with Guard
 Yea, this works with Guard too, cause @mikepgee loves guard.
 
-In your Guardfile:
+**In your Guardfile:**
 ```
 # Requires guard >= 4.0.0
 
