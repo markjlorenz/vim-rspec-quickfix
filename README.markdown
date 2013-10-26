@@ -59,5 +59,8 @@ end
 I generally dislike extensive extra-app tooling like guard.  I also dislike leaving VIM to run rspec.  So, lets map the mother of all leader commands:
 ```
 # Run the specs, and open the updated quickfix on `<leader>s`
-map <leader>s :call system('rspec --require=support/formatters/VIM_formatter.rb --format VimFormatter --out quickfix.out  --format progress') \| cg quickfix.out \| cwindow
+:map <leader>s :call system('rspec --require=support/formatters/VIM_formatter.rb --format VimFormatter --out quickfix.out  --format progress') \| cg quickfix.out \| cwindow
+
+# or, without the temp file:
+:map <leader>s :cgete system('rspec --require=support/formatters/vim_formatter.rb --format VimFormatter') \| cwindow
 ```
