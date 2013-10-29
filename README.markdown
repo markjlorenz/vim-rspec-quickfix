@@ -38,7 +38,7 @@ rspec --require=support/formatters/VIM_formatter.rb --format VimFormatter --out 
 ```
 
 ## Working with Guard
-Yea, this works with Guard too, cause @mikepgee loves guard.
+Yea, this works with Guard too, cause @mikegee loves guard.
 
 **In your Guardfile:**
 ```
