@@ -10,7 +10,7 @@ class VimFormatter < RSpec::Core::Formatters::BaseTextFormatter
     end
     message = format_message exception.message
     path    = format_caller path
-    output.puts "#{path}: #{example.example_group.description.strip}" +
+    output.puts "#{path}: #{example.example_group.description.strip} " +
       "#{example.description.strip}: #{message.strip}" if path
   end
 
