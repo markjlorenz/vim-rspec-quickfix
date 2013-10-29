@@ -42,7 +42,7 @@ Yea, this works with Guard too, cause @mikegee loves guard.
 
 **In your Guardfile:**
 ```
-# Requires guard >= 4.0.0
+# Requires guard >= 2.0.0
 
 rspec_quick =  ' rspec '
 rspec_quick << ' --require=support/formatters/VIM_formatter.rb '
