@@ -10,7 +10,11 @@ This repo is more of a how-to, than packaged sofware.  Imma show you how to do i
 **In your shell:**
 ```bash
 # Setup the spec formatter, so VIM can read rspec's output:
+# for RSpec 2:
 cp spec/support/formatters/vim_formatter.rb YOURREPO/spec/support/formatters/vim_formatter.rb
+
+# for RSpec 3:
+cp spec/support/formatters/vim_formatter_rspec3.rb YOURREPO/spec/support/formatters/vim_formatter.rb
 
 # Run rspec with the formatter, and put the output where VIM can get it.
 # (rspec lets you specify more than one formatter, so we still get nice
