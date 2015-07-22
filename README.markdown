@@ -10,12 +10,12 @@ This repo is more of a how-to, than packaged sofware.  Imma show you how to do i
 **In your shell:**
 ```bash
 # Setup the spec formatter, so VIM can read rspec's output:
-cp spec/support/formatters/VIM_formatter.rb YOURREPO/spec/support/formatters/vim_formatter.rb
+cp spec/support/formatters/vim_formatter.rb YOURREPO/spec/support/formatters/vim_formatter.rb
 
 # Run rspec with the formatter, and put the output where VIM can get it.
 # (rspec lets you specify more than one formatter, so we still get nice
 # documentation/progress output too! )
-rspec --require=support/formatters/VIM_formatter.rb --format VimFormatter --out quickfix.out  --format progress
+rspec --require=support/formatters/vim_formatter.rb --format VimFormatter --out quickfix.out  --format progress
 
 # `quickfix.out` now has the VIM-friendly spec output.
 ```
@@ -45,7 +45,7 @@ Yea, this works with Guard too, cause @mikegee loves guard.
 # Requires guard >= 2.0.0
 
 rspec_quick =  ' rspec '
-rspec_quick << ' --require=support/formatters/VIM_formatter.rb '
+rspec_quick << ' --require=support/formatters/vim_formatter.rb '
 rspec_quick << ' --format VimFormatter '
 rspec_quick << ' --out quickfix.out '
 rspec_quick << ' --format progress '
@@ -59,7 +59,7 @@ end
 I generally dislike extensive extra-app tooling like guard.  I also dislike leaving VIM to run rspec.  So, lets map the mother of all leader commands:
 ```
 # Run the specs, and open the updated quickfix on `<leader>s`
-:map <leader>s :call system('rspec --require=support/formatters/VIM_formatter.rb --format VimFormatter --out quickfix.out  --format progress') \| cg quickfix.out \| cwindow
+:map <leader>s :call system('rspec --require=support/formatters/vim_formatter.rb --format VimFormatter --out quickfix.out  --format progress') \| cg quickfix.out \| cwindow
 
 # or, without the temp file:
 :map <leader>s :cgete system('rspec --require=support/formatters/vim_formatter.rb --format VimFormatter') \| cwindow
